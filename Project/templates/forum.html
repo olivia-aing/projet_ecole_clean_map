@@ -1,0 +1,33 @@
+
+{% extends 'root.html' %}
+
+{% block title %}Forum {{discussion_id}}{% endblock %}
+
+{% block content %} 
+    <link href="../static/css/forum.css" rel="stylesheet"/>
+    <link href="../static/css/root.css" rel="stylesheet"/>
+<div> 
+    {% for message in data %}
+    <tr>
+        <div>
+        <td> <font size="-1" color="#0f7904">{{message[1]}}</font></td>
+        <td> <b><font size = "+1" color="#0f7904">{{message[4]}}</font></b></td></br>
+        <td> <font size="+2">{{message[2]}}</font></td>
+    </div>
+    </tr>
+    {% endfor %}
+</div>
+<form method ="POST">
+    <div class="form-group">
+        <label for="message">Message</label>
+        <input type="text" class="form-control" id="message" name="message" placeholder="Enter message"/>
+    </div>
+    <br/>
+    <button type="submit" class ="btn btn-primary">Submit</button>
+</form>
+<p>
+   <i> clickez <a href="/clean/{{discussion_id}}"> ici</a> pour définir le forum comme étant propre</i>
+</p>
+{% endblock %}
+
+

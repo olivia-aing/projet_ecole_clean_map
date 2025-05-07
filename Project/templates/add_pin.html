@@ -1,0 +1,70 @@
+{% extends 'root.html' %}
+
+{% block title %}Ajout d'un pin{% endblock %}
+
+{% block content %} 
+<p>
+<center>
+<h1> Ajouter un nouveau pin</h1>
+
+
+Veuillez entrer les coordonnées du pin à ajouter en degrés décimaux. <br> <br>
+Exemple pour Nancy : <br>
+Latitude = 48.6937223 et longitude = 6.1834097
+<br> <br>
+
+<form method="post">
+   <button type="button" class="button" onclick="getLocation()">Utiliser ma position</button>
+   <br> <br>
+   <input type="text" name="latitude" id="latitude"
+          pattern="-?\d{1,3}\.\d+"
+          placeholder="Latitude" required
+          value="{{ request.form['title'] }}"></input>
+   <br>
+   <input type="text" name="longitude" id="longitude"
+          pattern="-?\d{1,3}\.\d+"
+          placeholder="Longitude" required
+          value="{{ request.form['title'] }}"></input>
+   <br>
+   <input type="text" name="forum_title"
+          placeholder="Titre du forum associé" required
+          value="{{ request.form['title'] }}"></input>
+   <br> <br>
+   <button type="submit" class="button">Ajouter</button>
+</form>
+</center>
+
+<!-- script en java pour récupérer et remplir les champs correspondant à la latitude et longitude de l'utilisateur -->
+
+<script type="text/javascript">
+const latitude_input = document.getElementById("latitude"); // là où il y a un élément avec l'id latitude
+const longitude_input = document.getElementById("longitude");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition); // récupère les coordonnées actuelles mais necessite HTTPS
+  } else { // cas erreur : 
+    alert("La géolocalisation n'est pas supportée par ce navigateur.") ;
+  }
+}
+
+function showPosition(position) {
+  latitude_input.value = position.coords.latitude ;
+  longitude_input.value = position.coords.longitude ;
+  // pour insérer dans les champs latitude et longitude les valeurs de la géolocalisation actuelle
+}
+</script>
+
+{% endblock %}
+
+
+{% block afterError %} <br>
+
+
+<div>
+  <h2>Vous pouvez retrouver la liste des pins <a href="/forum">ici</a></h2>
+  
+</div> 
+
+
+{% endblock %}

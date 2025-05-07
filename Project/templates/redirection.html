@@ -1,0 +1,37 @@
+
+{% extends 'root.html' %}
+
+{% block title %}Page de redirection{% endblock %}
+
+{% block content %} 
+    <link href="../static/css/redirection.css" rel="stylesheet"/>
+    <link href="../static/css/root.css" rel="stylesheet"/>
+</div>
+
+<div class="left">
+
+  <h2>Liste des pins à nettoyer </h2>
+  
+  <p>Vous pouvez retrouver les forums en cliquant sur leur titre. </p>
+  <ul>
+     {% for line in tableToBeCleaned %} <!-- line = [ l.latitude, l.longitude, d.discussion_id, d.discussion_title, l.location_id ] -->
+    <li><a href="/forum/{{ line[4] }}"> {{line[3]}}</a> ( {{line[0]}} ; {{line[1]}} )</li>
+     {% endfor %}
+  </ul>
+  
+
+  </div>
+<div class="right">
+
+<h2>Liste des pins propres</h2>
+<p>Les forums des lieux notés comme propres ont été fermés. <br> 
+En cliquant sur le titre d'un forum vous changez le statut du lieu correspondant et la discussion sera rouverte pour le nettoyer.</p>
+<ul>
+   {% for line in tableAlreadyClean %} <!-- line = [ l.latitude, l.longitude, d.discussion_id, d.discussion_title ] -->
+    <li><a href="/notclean/{{ line[2] }}">{{line[3]}}</a> ( {{line[0]}} ; {{line[1]}} )</li>
+   {% endfor %}
+</ul>
+</p>
+
+
+{% endblock %}

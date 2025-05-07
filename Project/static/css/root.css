@@ -1,0 +1,99 @@
+nav  a{ /* tous les liens a à l'intérieur de la balise nav */
+    float: left; /* effet flottant */
+    text-decoration: none; /* pas d'héritage avec effet souligné */
+    color: #ffffff; /* couleur du texte */
+    background: #0f7904; /* couleur de fond */
+    height: 2%; /* hauteur */
+    line-height: 2%; /* interligne */
+    padding: 2%; /* marges intérieur */
+    font-family: sans-serif; /* police d'écriture */
+    font-size: 150%; /* taille du texte */
+    font-weight: bolder;
+    transition: .2s; /* temps de transition lors du hover : une demi seconde */
+    width: 16%;
+    text-align: center;
+    margin-bottom: 2%;
+    }
+nav  a:hover{ /* tous liens lors du survol dans la balise nav */
+    background: #68c40c; /* couleur de fond */
+    color: #0f7904;
+    text-decoration: underline #9ffd95;
+    text-decoration-style: solid;
+    text-decoration-thickness: 10%;
+    text-underline-position: under;
+    }
+
+body{  
+    background-color: #9ffd95; 
+    background-image: url("/static/photos/background.png");
+    background-size: cover;
+    font-family: sans-serif; /* police d'écriture */
+    color:#093604;
+}
+
+h1{
+    color: #105208;
+    text-align: center;
+}
+
+h2{
+    color: #0f7904;
+}
+
+
+button {
+    border: none;
+    border-radius: 4px;
+    background-color: #0f7904;;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 125%;
+    margin: 4px 2px;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: .2s
+}
+
+button:hover{
+    background-color: #68c40c;
+    color:#0f7904
+}
+
+input {
+    font-family: sans-serif; /* police d'écriture */
+}
+
+.left {
+    float: left; 
+    width: 40%;
+    padding: 0 5%;
+  }
+.right {
+    float: left;
+    width: 40%;
+    padding: 0 5%;
+  }
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px
+}
+
+ul li {
+  margin: 1em 0; 
+}
+
+ul li a{
+    color: black;
+    font-weight: bold;
+  }
+
+.flashes {
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+}

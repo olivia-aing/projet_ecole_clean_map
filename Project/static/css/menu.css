@@ -1,0 +1,17 @@
+nav  a{ /* tous les liens a à l'intérieur de la balise nav */
+    float: left; /* effet flottant */
+    text-decoration: none; /* pas d'héritage avec effet souligné */
+    color: #ffffff; /* couleur du texte */
+    background: #000000; /* couleur de fond */
+    height: 2%; /* hauteur */
+    line-height: 2%; /* interligne */
+    padding: 2%; /* marges intérieur */
+    font-family: sans-serif; /* police d'écriture */
+    font-size: 150%; /* taille du texte */
+    transition: .5s; /* temps de transition lors du hover : une demi seconde */
+    width: 21%;
+    text-align: center;
+    }
+    nav  a:hover{ /* tous liens lors du survol dans la balise nav */
+    background: #0f7904; /* couleur de fond */
+    }

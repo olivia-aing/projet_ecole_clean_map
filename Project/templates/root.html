@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    {% block head %} {% endblock %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" /> 
+    <link rel="icon" type="image/x-icon" href="/static/photos/logo_icon.png">
+    <!-- important pour s'adapter à la taille du device (téléphones !) -->
+
+    <link href="../static/css/root.css" rel="stylesheet"/>
+    <title>{% block title %}{% endblock %} - CleanMap</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/home">Accueil</a>
+        <a href="/map">Carte</a>
+        <a href="/forum">Forum</a>
+        <a href="/add">Ajout de site</a>
+        <a href="/about">À propos</a>
+    </nav>
+
+{% block content %} {% endblock %}
+
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+     <ul class="flashes">
+        {% for message in messages %}
+         <div class="message_flash">{{ message }}</div>
+        {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+{% block afterError %} {% endblock %}
+
+</body>

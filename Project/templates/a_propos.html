@@ -1,0 +1,40 @@
+{% extends 'root.html' %}
+
+{% block title %}A propos{% endblock %}
+
+{% block content %}
+<head>
+    <meta charset="utf-8" />
+    <link href="../static/css/about.css" rel="stylesheet"/>
+
+    <title>Accueil</title>
+</head>
+<body>
+    <h1> À propos</h1>
+        <h3>Bienvenue sur <img src="static/photos/logo_cleanmap.png" alt="logo" height="25" width="150" class="logo-png"> !</h3>
+                <p>Clean Map a été créé dans l'optique d'aider à la réalisation de l'objectif de développement durable "protection de la faune et de la flore terrestre". Notre idée a vu le jour dans le cadre d'un projet informatique à l'école TELECOM Nancy.</p>
+        <p>Notre objectif est de faciliter la mise en place d'actions de nettoyage pour que toute personne volontaire puisse facilement trouver un lieu qui a besoin d'aide. La carte permet d'ajouter des points de nettoyage et le forum vous permettra de trouver de l'aide pour rendre propre ces lieux !</p>
+        <h3> Notre équipe</h3>
+        <table>
+            <tr>
+                <td><img src="static/photos/Olivia.png" alt="Olivia" height="175" width="128"></td>
+                <td><img src="static/photos/Chloe.jpg" alt="Chloé" height="175" width="128"></td>
+                <td><img src="static/photos/Lise.JPG" alt="Lise" height="175" width="128"></td>
+                <td><img src="static/photos/Sylvie.png" alt="Sylvie" height="175" width="128"></td>
+                <td><img src="static/photos/Zoe.jpg" alt="Zoé" height="175" width="128"></td>
+            </tr>
+            <tr>
+                <td><center>Olivia Aing</center></td>
+                <td><center>Chloé Boninn</center></td>
+                <td><center>Lise Manière</center></td>
+                <td><center>Sylvie Sidler</center></td>
+                <td><center>Zoé Vernicos</center></td>
+            </tr>
+
+        </table>
+        <p>Toutes les cinq étudiantes à TELECOM Nancy, grande école d'ingénieurs en informatique et sciences du numérique.</p>
+        <!-- le logo de TN -->
+    <a href="https://telecomnancy.univ-lorraine.fr"><img src="static/photos/TN_détouré.png" alt="logo TN" height="100" width="200" class="logo-tn"></a>
+    <a href="https://www.univ-lorraine.fr"><img src="static/photos/univ_lorraine.png" alt="logo université de Lorraine" height="75" width="200" class="logo-universite"></a>
+</body>
+ {% endblock %}

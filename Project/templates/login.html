@@ -1,0 +1,27 @@
+{% extends 'root.html' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block content %}
+
+<head>
+    <meta charset="utf-8" />
+    <link href="../static/css/login.css" rel="stylesheet"/>
+
+    <title>Accueil</title>
+</head>
+
+<body>
+<center>
+    <h1>Connexion</h1>
+    <form method="post">
+        <label>Nom d'utilisateur</label><br>
+        <input type="text" id="username" name="username" placeholder="username"><br><br>
+        <label>Mot de passe</label><br>
+        <input type="password" id="password" name="password" placeholder="password"><br><br>
+        <button type="submit">Se connecter</button>
+    </form>
+    <p>Pas encore de compte ? <a href="/sign_up">S'inscrire</a></p>
+</center>
+</body>
+{% endblock %}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+{% extends 'root.html' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+
+<head>
+    <meta charset="utf-8" />
+    <link href="../static/css/home.css" rel="stylesheet"/>
+
+    <title>Accueil</title>
+</head>
+
+<body>
+    <div class="top">
+    <h1>Bienvenue sur</h1>
+        <div class="logo">
+            <a href="about">
+            <img src="static/photos/logo_full.png" alt="Logo Clean Map">
+            </a>
+        </div>
+    </div>
+
+    <table class="inscon">
+        <tr>
+            {% if uid %}
+            <td>
+                <form action="/logout">
+                    <button type="submit">Se déconnecter</button>
+                </form>
+            </td>
+            {% else %}
+            <td>
+                <form action="/sign_up">
+                    <button class="insbut" type="submit">Inscription</button>
+                </form>
+            </td>
+            <td>
+                <form action="/login">
+                    <button class="conbut" type="submit">Connexion</button>
+                </form>
+            </td>
+            {% endif %}
+        </tr>
+
+    </table>
+
+    {% autoescape off %}
+
+    <table class="appreciation">
+        <tr>
+            <td> 
+
+            {% if (propre[0][0]>1) %}
+            Grâce à vous, nous avons nettoyé <a class='num1'>{{propre[0][0]}}</a> sites,
+            {% else %}
+            Grâce à vous, nous avons nettoyé <a class='num1'>{{propre[0][0]}}</a> site,
+            {% endif %}
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            {% if (total[0][0]>1) %}
+            sur <a class='num2'>{{total[0][0]}}</a> sites répertoriés !
+            {% else %}
+            sur <a class='num2'>{{total[0][0]}}</a> site répertorié !
+            {% endif %}
+
+            </td>
+        </tr>
+    </table>
+
+    {% endautoescape %}
+
+    <table class="foot">
+        <tr>
+            <td>
+                <a href="https://telecomnancy.univ-lorraine.fr"> <img src="static/photos/TN_détouré.png" alt="Logo TELECOM Nancy" class="logotn"> </a>
+            </td>
+            <td>
+                <a href="https://www.univ-lorraine.fr"><img src="static/photos/univ_lorraine.png" alt="Logo Université de Lorraine" class="logouniv"> </a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+

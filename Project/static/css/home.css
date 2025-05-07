@@ -1,0 +1,97 @@
+body{
+    background-image: url("/static/photos/background2.png");
+}
+
+.top{
+    margin-left: auto;
+    margin-right:auto;
+    width: 50%;
+    text-align: center;
+    padding-top:5%;
+}
+
+.top img{
+    -webkit-filter: drop-shadow(0 0 7px #ffffffaa);
+    -moz-filter: drop-shadow(0 0 7px #ffffffaa);
+    -ms-filter: drop-shadow(0 0 7px #ffffffaa); 
+    -o-filter: drop-shadow(0 0 7px #ffffffaa);
+     filter: drop-shadow(0 0 7px #ffffffaa);
+    }
+
+.inscon{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:3%;
+    margin-bottom:3%;
+}
+
+.inscon button{
+    border: 100% solid #105208;
+    border-radius: 10px;
+    border-color: #105208;
+    background-color: #0f7904;;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 140%;
+    padding-left:20%;
+    padding-right:20%;
+    padding-top:10%;
+    padding-bottom: 10%;
+    cursor: pointer;
+    transition: .2s;
+    width:max-content;
+}
+
+.inscon button:hover{
+    background-color: #68c40c;
+    color:#0f7904
+}
+
+.insbut{
+    margin-left:-75%;
+}
+
+.conbut{
+    margin-left:75%;
+}
+
+.appreciation{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: #ffffffaa 0 0 7px;
+    font-size:200%;
+    color: #0f7904;
+}
+
+
+.num1{
+    color:#bf8f00;
+    font-weight: bold;
+}
+
+.num2{
+    color:#105208;
+    font-weight: bold;
+}
+
+
+.foot{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 5%;
+    bottom:0;
+}
+
+.logotn{
+    max-width:25%;
+    margin-left:45%;
+}
+
+.logouniv{
+    max-width:50%;
+    margin-left:-10%;
+}
+
